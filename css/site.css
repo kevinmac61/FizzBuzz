@@ -1,7 +1,7 @@
 :root {
-	--primary-color: #1d5888;
-	--secondary-color: #ff993b;
-	--dark-color: #292929;
+	--primary-color: #f8b500;
+	--secondary-color: #c59000;
+	--dark-color: #505762;
 	--white-color: #e7e7e7;
 }
 
@@ -20,7 +20,7 @@ h3,
 h4,
 h5,
 h6 {
-	color: var(--primary-color);
+	color: var(--secondary-color);
 }
 
 .bsicon {
@@ -41,6 +41,19 @@ h6 {
 
 .checklist > li i {
 	color: var(--secondary-color);
+}
+
+.Fizz {
+	color: darksalmon;
+}
+
+.Buzz {
+	color: darkblue;
+}
+
+.FizzBuzz {
+	color: red;
+	font-weight: bold;
 }
 
 code[class*="language-"],
