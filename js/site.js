@@ -1,5 +1,4 @@
-// get the values from the page
-//parse the values
+// get the values from the page and parse the values
 
 function getValues() {
     let fizzValue = document.getElementById("fizzValue").value;
@@ -16,9 +15,9 @@ function getValues() {
     }
 }
 
-// determine if fizz, buzz or fizzbuzz
+// one option to determine if fizz, buzz or fizzbuzz
 
-function fizzBuzz(fizzValue, buzzValue) {
+function fizzBuzzToo(fizzValue, buzzValue) {
     let returnArray = [];
     // loop from 1 to 100
     for (let i = 1; i <= 100; i++) {
@@ -32,6 +31,18 @@ function fizzBuzz(fizzValue, buzzValue) {
         }else{
             returnArray.push(i);
         }     
+    }
+    return returnArray;
+}
+
+// my preferred option to determine if fizz, buzz or fizzbuzz
+function fizzBuzz(fizzValue, buzzValue) {
+    let returnArray = [];
+    // loop from 1 to 100
+    for (let i = 1; i <= 100; i++) {
+
+        let value = ((i % fizzValue == 0 ? `Fizz` : '') + (i % buzzValue == 0 ? 'Buzz' : '') || i ); 
+        returnArray.push(value); 
     }
     return returnArray;
 }
@@ -69,6 +80,4 @@ function resultsFizz(fbArray){
 
         tableBody.appendChild(tableRow);
     }
-    console.log(`${element}`);
-
 }

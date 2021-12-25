@@ -73,9 +73,9 @@
                                 }
                             }
 
-                            // determine if fizz, buzz or fizzbuzz
+                            // one option to determine if fizz, buzz or fizzbuzz
 
-                            function fizzBuzz(fizzValue, buzzValue) {
+                            function fizzBuzzToo(fizzValue, buzzValue) {
                                 let returnArray = [];
                                 // loop from 1 to 100
                                 for (let i = 1; i <= 100; i++) {
@@ -89,6 +89,18 @@
                                     }else{
                                         returnArray.push(i);
                                     }     
+                                }
+                                return returnArray;
+                            }
+
+                            // my preferred option to determine if fizz, buzz or fizzbuzz
+                            function fizzBuzz(fizzValue, buzzValue) {
+                                let returnArray = [];
+                                // loop from 1 to 100
+                                for (let i = 1; i <= 100; i++) {
+
+                                    let value = ((i % fizzValue == 0 ? `Fizz` : '') + (i % buzzValue == 0 ? 'Buzz' : '') || i ); 
+                                    returnArray.push(value); 
                                 }
                                 return returnArray;
                             }
@@ -126,17 +138,17 @@
 
                                     tableBody.appendChild(tableRow);
                                 }
-                                console.log(`${element}`);
-
                             }
-
                         </code>
                     </pre>
                 </div>
                 <div class="col-lg-4 mt-3">
-                    <p>The code is structured in three functions.</p>
-                    <h5>FizzBuzz</h5>
-                    <p>Write out the description</p>
+                    <h4>FizzBuzz</h4>
+                    <h6>FizzBuzz is an app that displays numbers from 1 to 100. For multiples of "3", instead of the number displays "Fizz" and for multiples of "5" instead of the number displays "Buzz". If the number is a multiple of both "3" AND "5" then "FizzBuzz" is displayed. This version allows the user to choose their own numbers instead of just 3 and 5.</h6>
+                    <p>The code is structured in four functions. Actually only three are used, but I wanted to show two different versions of figuring out the logic portion.</p>
+                    <p>The first function getValues() receives the inputs from the form and calls the fizzBuzz() and resultsFizz() functions.</p>
+                    <p>The next two functions accomplish the same result but I waanted to show two ways of doing it. The first fizzBuzzToo() uses a for/loop to go through the numbers and add them to an array based on whether they are divisible by the inputs from the first function. The second function fizzBuzz() uses the ternary operator to do the same thing but with much less code.</p>
+                    <p>The last function resultsFizz() loops through the array and builds the cells to populate the table, adds the class to color the cell based on result and displays it on the page.</p>
                 </div>
             </div>
         </div>
