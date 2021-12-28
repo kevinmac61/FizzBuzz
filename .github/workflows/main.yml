@@ -17,4 +17,4 @@ jobs:
         server: halamediagroup.com
         username: ${{ secrets.SECRET_USERNAME }}
         password: ${{ secrets.SECRET_PASSWORD }}
-        server-dir: /public_html/fizzbuzz
+        server-dir: /public_html/fizzbuzz/
